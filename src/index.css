@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:#ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navigation */
+
+nav{display: flex;
+justify-content: space-between;
+background-color: #0c0f0a;
+color: #ffffff;
+
+}
+nav img{
+  margin-right: 10px;
+}
+nav h2{
+  margin-left: 10px;
+}
+
+.navItems{
+  position: absolute;
+  background-color:#0c0f0a;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  left: -100%;
+  transition: all 0.5s ease-in-out;
+}
+.navItems-active p{ width: 40%;
+margin-left: 30%;
+cursor: pointer;
+padding: 2px 0px;
+}
+.navItems p{ width: 40%;
+  margin-left: 30%;
+
+  padding: 2px 0px;
+  }
+.navItems-active{
+  position: absolute;
+  background-color:#0c0f0a;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  left:0;
+  transition: all 0.5s ease-in-out;
+}
+.navItems-active p:hover{
+  outline: 1px solid #ffffff;
+  border-radius: 5px;
+  color: #41ead4;
+}
+
+/* categories */
+
+.category{
+  margin-top: 50px;
+height: 200px;
+width: 80%;
+margin-left:10% ;
+}
+
+
+.categoriesDiv h1{ 
+  margin-left: 20px;
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+.categoryBtn{
+  background-color: #fbff12;
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 4px;
+
+}
+
+/* animating and aligning the mobile menu */
+.ham{
+  display: flex;
+  flex-direction: column;
+  margin-top: 31.5px;
+  margin-right: 10px;
+  width: 50px;
+}
+.ham-active{
+  margin-top: 35px;
+  margin-right: 10px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamBar1{
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  margin-bottom:10px;
+  transition: all 0.5s ;
+}
+.hamBar2{
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  transition: all 0.5s ;
+}
+
+.hamBar1-active{
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  transform: rotate(45deg);
+  transition: all 0.5s ;
+}
+.hamBar2-active{
+  background-color: white;
+  width: 30px;
+  height: 3px;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+
+/* Car display div */
+
+.carDisplay{
+  height: 400px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top:50px;
+}
+.carDisplay img{
+  height: 250px;
+}
+.pricing_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+}
+.car-btn{
+  background-color: #fbff12;
+cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+
+  font-size: 15px;
+}
+.discount{
+  background-color: #ff206e;
+  position: absolute;
+  width: 70px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+}
