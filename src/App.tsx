@@ -1,17 +1,16 @@
 import React from 'react';
 import Header from './Components/Header';
-import Categories from './Components/Categories';
-import Offers from './Components/Offers';
-import Featured from './Components/Featured';
+import Body from './Components/Body';
+import Footer from './Components/Footer';
+import {DataProvider} from './context'
 function App() {
   return (
     <div className="App">
-  
+  <DataProvider>
  <Header/>
- <Categories/>
-
- <Featured/>
- <Offers/>
+ <Body/>
+ <Footer/>
+ </DataProvider>
     </div>
   );
 }
