@@ -41,41 +41,24 @@ nav {
   color: white;
   width: 100%;
   text-align: center;
-  left: -100%;
   top: 60px;
   transition: all 0.5s ease-in-out;
 }
 
-.navItems-active p {
-  width: 40%;
-  margin-left: 30%;
-  cursor: pointer;
-  padding: 2px 0px;
-
-}
 
 .navItems p {
   width: 40%;
   margin-left: 30%;
-
   padding: 2px 0px;
 }
 
-.navItems-active {
-  position: absolute;
-  background-color: #0c0f0a;
-  width: 100%;
-  top: 60px;
-  color: white;
-  text-align: center;
-  left: 0;
-  transition: all 0.5s ease-in-out;
-}
 
-.navItems-active p:hover {
+
+.navItems p:hover {
   outline: 1px solid #ffffff;
   border-radius: 5px;
   color: #41ead4;
+  cursor: pointer;
 }
 
 /* categories */
@@ -143,65 +126,19 @@ nav {
   align-items: center;
 }
 
-.ham-active {
-  margin-right: 10px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.hamBar1 {
+.hamBar {
   background-color: white;
   width: 30px;
   height: 3px;
-  margin-bottom: 10px;
+
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
 
-.hamBar2 {
-  background-color: white;
-  width: 30px;
-  height: 3px;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
 
-.hamBar1-active {
-  background-color: white;
-  width: 30px;
-  height: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
-
-.hamBar2-active {
-  background-color: white;
-  width: 30px;
-  height: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-}
 
 /* Car display div */
 

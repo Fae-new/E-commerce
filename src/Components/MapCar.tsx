@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Car,Cart } from '../Data/mapData'
-import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
+import React from 'react'
+import { Car, Cart } from '../Data/mapData'
+// import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 import { useDataContext } from '../context';
 
@@ -9,32 +9,21 @@ const Map = ({ array }: { array: Car[] }) => {
     const { data, setData } = useDataContext()
 
     const handleClick = (e: React.MouseEvent<HTMLParagraphElement>) => {
-      
-        if (setData) {
-            const  check=(element:Cart)=>element.productId === +(e.target as HTMLParagraphElement).id
-            setData((prev)=>{       
-                     if (prev.some(check)) {
-            
-           
-                         const newArray:Cart[] = prev.map((item) => {
-                             if (item.productId === +(e.target as HTMLParagraphElement).id)item.qty= item.qty+0.5
-                        return item
-                         })
-                      return newArray
-                   }
 
-                   else{ return [...prev, { productId: +(e.target as HTMLParagraphElement).id, qty: 1 }]}
+        if (setData && data) {
+            const check = (element: Cart) => element.productId === +(e.target as HTMLParagraphElement).id
+            const newArray: Cart[] = data.map((item) => {
+                if (item.productId === +(e.target as HTMLParagraphElement).id) item.qty = item.qty + 1
+                return item
+            })
 
-                
-                
-
+            setData((prev) => {
+                if (prev.some(check)) return newArray
+                else { return [...prev, { productId: +(e.target as HTMLParagraphElement).id, qty: 1 }] }
             })
         }
 
     }
-
-
-
 
     localStorage.setItem('cart', JSON.stringify(data))
 
