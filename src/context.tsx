@@ -1,9 +1,9 @@
 import React,{useContext,useState}from 'react'
 
-import { Cart } from './Data/mapData'
+import { Car } from './Data/mapData'
 
 
-const dataContext= React.createContext<{ data: Cart[]|null; setData: React.Dispatch<React.SetStateAction<Cart[]>>|null}>({data:null,setData:null})
+const dataContext= React.createContext<{ data: Car[]|null; setData: React.Dispatch<React.SetStateAction<Car[]>>|null}>({data:null,setData:null})
 
 export const useDataContext = () => {
     return useContext(dataContext)

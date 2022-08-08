@@ -9,13 +9,10 @@ imgSrc:string;
 name:string;
 alt:string
 price:number
-discount:boolean|number
+discount:boolean|number;
+qty:number
 }
 
-export interface Cart{
-    productId:number;
-    qty:number;
-}
 
 
 export const categories:Categories[]=[
@@ -26,17 +23,17 @@ export const categories:Categories[]=[
 ]
 
 export const carData:Car[] =[
-{productId:1,  imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:"2021 Mercedes AMG E53",alt:'Benz',price:162000,discount:false},
-{productId:2,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Toyota Venza LE',alt:'Toyota',price:34455,discount:false},
-{productId:3,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2020 Lexus RX 350',alt:'Lexus',price:44150,discount:false},
-{productId:4,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Honda Accord LX',alt:'Honda',price:27615,discount:false},
-{productId:5,  imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:"2021 Mercedes AMG E53",alt:'Benz',price:162000,discount:false},
-{productId:6,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Toyota Venza LE',alt:'Toyota',price:34455,discount:false},
-{productId:7,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2020 Lexus RX 350',alt:'Lexus',price:44150,discount:false},
-{productId:8,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Honda Accord LX',alt:'Honda',price:27615,discount:false},
-    {productId:9,  imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:"2021 Mercedes AMG E53",alt:'Benz',price:162000,discount:3},
-    {productId:10,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Toyota Venza LE',alt:'Toyota',price:34455,discount:4.5},
-    {productId:11,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2020 Lexus RX 350',alt:'Lexus',price:44150,discount:6},
-    {productId:12,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Honda Accord LX',alt:'Honda',price:27615,discount:5}
+{productId:1,  imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:"2021 Mercedes AMG E53",alt:'Benz',price:162000,discount:false,qty:1},
+{productId:2,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Toyota Venza LE',alt:'Toyota',price:34455,discount:false,qty:1},
+{productId:3,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2020 Lexus RX 350',alt:'Lexus',price:44150,discount:false,qty:1},
+{productId:4,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Honda Accord LX',alt:'Honda',price:27615,discount:false,qty:1},
+{productId:5,  imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:"2021 Mercedes AMG E53",alt:'Benz',price:162000,discount:false,qty:1},
+{productId:6,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Toyota Venza LE',alt:'Toyota',price:34455,discount:false,qty:1},
+{productId:7,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2020 Lexus RX 350',alt:'Lexus',price:44150,discount:false,qty:1},
+{productId:8,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Honda Accord LX',alt:'Honda',price:27615,discount:false,qty:1},
+{productId:9,  imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:"2021 Mercedes AMG E53",alt:'Benz',price:162000,discount:3,qty:1},
+{productId:10,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Toyota Venza LE',alt:'Toyota',price:34455,discount:4.5,qty:1},
+{productId:11,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2020 Lexus RX 350',alt:'Lexus',price:44150,discount:6,qty:1},
+{productId:12,imgSrc:'https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png',name:'2022 Honda Accord LX',alt:'Honda',price:27615,discount:5,qty:1}
 
 ]
