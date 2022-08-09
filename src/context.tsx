@@ -12,7 +12,7 @@ export const useDataContext = () => {
 export const DataProvider =({children}:{children:React.ReactNode})=>{
 const cart= JSON.parse( localStorage.getItem('cart')||'[]')
 
-    const [data,setData]=useState(cart)
+    const [data,setData]=useState<Car[]>(cart)
     return(
        <dataContext.Provider value={{data,setData}}>
         {children}

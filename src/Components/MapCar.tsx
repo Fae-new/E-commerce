@@ -10,7 +10,7 @@ const Map = ({ array }: { array: Car[] }) => {
     const { data, setData } = useDataContext()
 
     const handleClick = (e: React.MouseEvent<HTMLParagraphElement>) => {
-        const check = (element: Car) => element.productId === +(e.target as HTMLParagraphElement).id+1
+        const check = (element: Car) => element.productId === +(e.target as HTMLParagraphElement).id+1 
         if (setData && data) {
           
             const newArray: Car[] = data.map((item) => {
@@ -28,7 +28,7 @@ const Map = ({ array }: { array: Car[] }) => {
     }
 
     localStorage.setItem('cart', JSON.stringify(data))
-    console.log(data);
+ 
     
 
     return (

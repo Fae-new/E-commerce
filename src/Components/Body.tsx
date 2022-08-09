@@ -3,7 +3,7 @@ import Categories from './Categories';
 import Offers from './Offers';
 import Featured from './Featured';
 import SpecificCar from './SpecificCar';
-import Cart from './cart';
+import Footer from './Footer';
 
 const Body = () => {
   return (
@@ -12,7 +12,8 @@ const Body = () => {
 <Featured/>
 <Offers/>
 <SpecificCar/>
-<Cart/>
+<Footer/>
+
 </>
   )
 }
