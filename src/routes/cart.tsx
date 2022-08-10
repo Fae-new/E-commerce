@@ -1,7 +1,11 @@
 import React from 'react'
-import { carData, Car } from '../Data/mapData'
+import {Car } from '../Data/mapData'
 import { useDataContext } from '../context'
 import CartPricing from '../Components/CartPricing'
+import {Link} from 'react-router-dom'
+
+
+import {ArrowBackIos} from '@mui/icons-material';
 
 const Cart = () => {
     const { data, setData } = useDataContext()
@@ -26,7 +30,7 @@ const Cart = () => {
             setData((prev) => {
                 if (newArray) { return newArray }
                 else {
-                    return (prev.filter((item) => { return item.productId != +(e.target as HTMLParagraphElement).id }))
+                    return (prev.filter((item) => { return item.productId !== +(e.target as HTMLParagraphElement).id }))
                 }
             })
         }
@@ -39,13 +43,20 @@ const Cart = () => {
 
     return (
         data?.length === 0 ?
-            <div style={{marginTop:'100px'}}>
-                <h3 style={{ textAlign: 'center' }}>No items in cart yet</h3>
-
+            <div className='cartHeader' >
+  <Link to='/'><ArrowBackIos className='back' /></Link> 
+                <h3>No items in cart yet</h3>
+                <img src={require('../Cars/empty-cart.png')} alt="" />
+              
             </div> :
 
             <div>
-                <h3 style={{marginTop: '100px',textAlign:'center'}}>Cart</h3>
+                <div  className='cartHeader'>
+
+      <Link to='/'><ArrowBackIos className='back' /></Link> 
+                <h3>Cart</h3>
+                </div>
+                
                 {data?.map((item, index) => {
                     return (<div key={index} className='cart'>
                         <img src={item.imgSrc} alt="" />

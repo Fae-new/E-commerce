@@ -1,7 +1,7 @@
 import React from 'react'
 import { Car} from '../Data/mapData'
 import {carData} from '../Data/mapData'
-
+ 
 
 import { useDataContext } from '../context';
 
@@ -32,21 +32,18 @@ const Map = ({ array }: { array: Car[] }) => {
     
 
     return (
-        <div>
+        <div className='carDisplayDiv'>
 
             {array.map((car) => {
                 return (
                     <div key={car.productId} className='carDisplay'>
                         {car.discount ? <div className='discount'>{car.discount}% off</div> : null}
                         <img src={car.imgSrc} alt={car.alt} />
-                        <p> <span style={{ fontWeight: 'bold', fontSize: '19px', marginLeft: '10px' }}>{car.name} </span></p>
-                        <div className='pricing_info'>
+                        <p style={{fontSize:'12px',color:'gray',marginLeft:'10px'}}>{car.alt}</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '16px',marginTop:'-10px',marginBottom:'-10px',marginLeft:'5px'}}>{car.name} </p>
+                        
                             <p className='car-btn'>${car.price.toLocaleString()} </p>
-                            <p className='details-btn' style={{ display: 'flex' }} onClick={handleClick} id={(car.productId-1)+''} >Add to Cart</p>
-
-                        </div>
-                        <p style={{ textAlign: 'center', textDecoration: 'underline', fontWeight: 'bold' }} >View Details</p>
-
+                            <p className='cart-btn'  onClick={handleClick} id={(car.productId-1)+''} >Add to Cart</p>
                     </div>)
             })}
 

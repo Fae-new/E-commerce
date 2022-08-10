@@ -7,10 +7,10 @@ const Offers = () => {
   return (
     <>
     <h2 className='header'> Amazing New offers this {month.toLocaleString('default',{month:'long'})}🤩 </h2>
-    <p style={{marginLeft:'10px'}}>Up to 6% discount on these cars</p>
-    <Map array={carData.slice(8,12)}/>
+    <p style={{textAlign:'center'}}>Up to 6% discount on these cars</p>
+    <Map array={carData.slice(6,12)}/>
     </>
   )
 }
 
-export default Offers
+export default Offers;

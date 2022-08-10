@@ -14,13 +14,23 @@ const Header = () => {
         <>
             <nav>
                 <h2 className='logo'>Cars</h2>
-                <div style={{ display: 'flex', textAlign: 'center' }} >
+                <div className='textNav'>
                     <div className='navItems' style={{left:navStatus?'0':'-100%'}}>
                        <Link to='/'>  <p> Homepage</p></Link>
                         <p> About us</p>
                         <p> Categories</p>
                         <p style={{ outline: '1px solid #ffffff', borderRadius: '5px', color: '#41ead4' }}>Log In</p>
                     </div>
+
+                    <div className='navItemsDesktop'>
+                       <Link to='/'>  <p> Homepage</p></Link>
+                        <p> About us</p>
+                        <p> Categories</p>
+                        <p className='login' style={{ outline: '1px solid #ffffff', borderRadius: '5px', color: '#41ead4' }}>Log In</p>
+                    </div>
+
+
+
                     <div className='carticon'> <Link to='/cart'> <ShoppingCartIcon sx={{color:'white'}}/> </Link> <p className='cartNo'>{qty}</p>  </div>
                     <div className='ham' onClick={handleClick}>
                         <div className='hamBar' style={{ marginBottom:navStatus?'':'10px',transform:navStatus?'rotate(45deg)':''}}></div>

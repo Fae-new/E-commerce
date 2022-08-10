@@ -4,8 +4,8 @@ import Map from './MapCar'
 const Featured = () => {
   return (
    <>
-   <h2 className='header'>Featured products</h2>
-<Map array={carData.slice(0,8)}/>
+   <h1 className='header'>Featured products</h1>
+<Map array={carData.slice(0,6)}/>
    </>
   )
 }
