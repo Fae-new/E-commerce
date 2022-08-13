@@ -3,9 +3,9 @@ import { categories } from '../Data/mapData'
 const Categories = () => {
     return (
         <>
-          <h1 style={{  marginTop: '110px'}}>Check out our product categories</h1>
-       
-          
+            <h1 style={{ marginTop: '100px' }} className='header'>Check out our product categories</h1>
+
+
             <div className='categoriesDiv'>
                 {categories.map((category, index) => {
                     return (<div className='category' key={index}>
@@ -16,7 +16,7 @@ const Categories = () => {
 
                 })}
             </div>
-        
+
         </>
     )
 }

@@ -1,15 +1,15 @@
 import React from 'react'
-import {Car } from '../Data/mapData'
-import { useDataContext } from '../context'
+import { Car } from '../Data/mapData'
+import { useDataContext } from '../Context/cartContext'
 import CartPricing from '../Components/CartPricing'
-import {Link} from 'react-router-dom'
-
-
-import {ArrowBackIos} from '@mui/icons-material';
+import { Link } from 'react-router-dom'
+import DeleteIcon from '@mui/icons-material/Delete'
+import { ArrowBackIos } from '@mui/icons-material';
 
 const Cart = () => {
+
     const { data, setData } = useDataContext()
-  
+
 
     const handleClick = (e: React.MouseEvent<HTMLParagraphElement>) => {
 
@@ -43,20 +43,28 @@ const Cart = () => {
 
     return (
         data?.length === 0 ?
-            <div className='cartHeader' >
-  <Link to='/'><ArrowBackIos className='back' /></Link> 
-                <h3>No items in cart yet</h3>
-                <img src={require('../Cars/empty-cart.png')} alt="" />
-              
-            </div> :
+            <>
+                <div className='cartHeader' >
+                    <Link to='/'>  <ArrowBackIos className='back' /> </Link>
+                    <h3>No items yet</h3>
+                    <DeleteIcon sx={{ cursor: 'pointer' }} />
+
+
+
+
+                </div>
+                <img className='noItems' style={{ display: 'flex', justifyContent: 'center' }} src={require('../Cars/empty-cart.png')} alt="" />
+            </>
+            :
 
             <div>
-                <div  className='cartHeader'>
+                <div className='cartHeader'>
 
-      <Link to='/'><ArrowBackIos className='back' /></Link> 
-                <h3>Cart</h3>
+                    <Link to='/'><ArrowBackIos className='back' /></Link>
+                    <h3>Cart</h3>
+                    <DeleteIcon />
                 </div>
-                
+
                 {data?.map((item, index) => {
                     return (<div key={index} className='cart'>
                         <img src={item.imgSrc} alt="" />
@@ -70,7 +78,7 @@ const Cart = () => {
                     </div>)
                 })}
                 <br />
-               <CartPricing/>
+                <CartPricing />
 
             </div>
 

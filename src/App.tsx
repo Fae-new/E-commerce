@@ -1,21 +1,38 @@
 import React from 'react';
-import Header from './Components/Header';
+import { DataProvider } from './Context/cartContext'
 import Body from './Components/Body';
-
-import { DataProvider } from './context'
-import Cart from './routes/cart';
 import { Routes, Route } from 'react-router-dom'
+import ProtectedRoutes from './Components/ProtectedRoutes';
+import { Userprovider } from './Context/userContext';
+import Cart from './routes/cart';
+import Signin from './routes/Signin';
+import Register from './routes/Register';
+
+
+
 
 function App() {
+
   return (
     <div className="App">
-      <DataProvider>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Body />} />
-          <Route path='/cart' element={<Cart />} />
-        </Routes>
-      </DataProvider>
+      <Userprovider>
+        <DataProvider>
+
+          <Routes>
+
+            <Route element={<ProtectedRoutes />}>
+              <Route path='/' element={<Body />} />
+              <Route path='cart' element={<Cart />} />
+            </Route>
+
+            <Route path='login' element={<Signin />} />
+            <Route path='register' element={<Register />} />
+
+
+          </Routes>
+        </DataProvider>
+      </Userprovider>
+
     </div>
   );
 }

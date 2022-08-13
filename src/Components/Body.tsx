@@ -5,16 +5,21 @@ import Featured from './Featured';
 import SpecificCar from './SpecificCar';
 import Footer from './Footer';
 
+
+
+
+
 const Body = () => {
+
+
   return (
     <>
-    <Categories/>
-<Featured/>
-<Offers/>
-<SpecificCar/>
-<Footer/>
-
-</>
+      <Categories />
+      <Featured />
+      <Offers />
+      <SpecificCar />
+      <Footer />
+    </>
   )
 }
 
